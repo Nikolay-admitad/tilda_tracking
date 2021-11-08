@@ -39,15 +39,6 @@ foreach ($posback_request as $key => $value) {
 
 $url = 'https://ad.admitad.com/r?' . implode('&', $parts);
 
-header('Access-Control-Allow-Origin: *');
-
-$headers = "From: from@webhookservesite.ru";
-
- @mail('n.kocherga@admitad.com', 'Tilda TEST', json_encode($posback_request), $headers);
-/* замените электронную почту на вашу действующую почту,  на которую вам будет приходить письмо  */
-
-echo"ok";
-
 if ($deduplication_cookie_value == 'admitad' || $$deduplication_cookie_value == 'adm'){
 	file_get_contents($url);
 } 
