@@ -39,7 +39,7 @@ foreach ($posback_request as $key => $value) {
 
 $url = 'https://ad.admitad.com/r?' . implode('&', $parts);
 
-if ($deduplication_cookie_value == 'admitad' || $$deduplication_cookie_value == 'adm'){
+if ($deduplication_cookie_value == 'admitad' || $deduplication_cookie_value == 'adm'){
 	file_get_contents($url);
 } 
 ?>
